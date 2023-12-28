@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heredity and Variation 1</title>
+  <meta property="og:title" content="Heredity and Variation 1">
+  <meta property="og:site_name" content="Edukatte">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1641903202531-bfa6bf0c6419?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2VuZXN8ZW58MHwwfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60">
+  <meta property="og:description" content="Expand your knowledge on Heredity and Variation!">
+  <meta name="keywords" content="Heredity and Variation,HSB,EduQuizz,Edukatte,Quiz">
+  <meta name="author" content="Krish Beachoo">
+  <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+  <script src="https://kit.fontawesome.com/fcf47e5f26.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Architects+Daughter&display=swap" rel="stylesheet">  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSMS3DDW4X"></script>
+</head>
+<body>
+  <style>
+    :root {
+  --drk-clr: #071952; /*#318d57*/
+  --lite-clr: #0e8086; /*#7fb48e*/
+  --ot-clr: #f0efe7 ; /*#EFFDF3*/
+  --grey-clr: #d6e7e8; /*#bed4c3*/
+  --txt-clr: black; /*black*/
+  --alt-txt-clr: white; /*white*/
+  --head-ft: 'Architects Daughter', cursive; 
+  --nrm-ft: 'Abel', sans-serif;
+
+  --drk-mode: #101311;/*101311*/
+  --drk-mode-grey: #3B4A3F; /*3B4A3F*/
+
+  --notif-clr: #da1647;
+
+  --grad-clr:  linear-gradient(180deg, #2af598 0%, #009efd 100%); /*linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)*/
+  --grad-prog: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%); /*linear-gradient(to top, #ff0844 0%, #ffb199 100%)*/
+
+}
+
+    body {
+    background: var(--drk-clr);
+    color: var(--alt-txt-clr);
+    font-family: var(--nrm-ft);
+    font-size: 25px;
+  }
+
+  .question h3 {
+    text-align: center;
+  }
+
+  #container {
+    width: 70%;
+    background: var(--lite-clr);
+    margin: 20px auto;
+    overflow: auto;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  header {
+    text-align: center;
+    border-bottom: var(--notif-clr) solid 3px;
+    background-color: var(--drk-clr);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  header h1,
+  header p {
+    font-family: var(--head-ft)
+    margin 0;
+    padding: 0;
+    font-size: 40px;
+  }
+  
+  header p {
+    margin-top: 5px;
+    color: var(--alt-txt-clr);
+    text-decoration: underline;
+    font-size: 20px;
+  }
+  
+  section {
+    min-height: 400px;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  
+  input[type="submit"] {
+    background: var(--grad-clr);
+    border: 0;
+    color: var(--txt-clr);
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 5px;
+  }
+
+  input[type="submit"]:hover {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: ease 0.1s;
+    letter-spacing: 4px;
+    border-radius: 10px;
+  }
+  
+  #results h3 {
+    background: var(--drk-clr);
+    padding: 10px;
+    margin: 10px 0;
+  }
+  #results span {
+    color: #000;
+    font-weight: bold; 
+  }
+
+  .main-article img {
+    border: 2px solid var(--drk-clr);
+    max-height: 80vh;
+  }
+
+  .head-img {
+    display: block;
+    max-height: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .main-article__figure figcaption {
+    margin: 1rem 0;
+    font-size: 10px;
+    opacity: .9;
+    text-align: center;
+  }
+
+  footer {
+    background: var(--notif-clr);
+    margin-top: 10px;
+    padding: 0.5px;
+    border-radius: 10px;
+  }
+
+.notelink {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.gotonote {
+  text-decoration: none;
+  background-color: var(--drk-clr);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--alt-txt-clr);
+  font-size: 18px;
+}
+
+.gotonote:hover {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: ease 0.1s;
+  letter-spacing: 2px;
+}
+
+.quizs {
+  display: block;
+}
+
+.time-cont {
+  position: fixed;
+  display: block;
+  top: 5px;
+  left: 10px;
+  background-color: var(--notif-clr);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.timest {
+  text-decoration: none;
+  color: var(--txt-clr);
+  margin: 0;
+  font-size: 15px;
+}
+
+#timer {
+  font-size: 20px;
+  margin-top: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.kclock img {
+  max-height: 5vh;
+  top: 110px;
+  left: 20px;
+  position: fixed;
+}
+
+#end {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: var(--drk-clr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: ease 2s;
+}
+
+.end-a {
+  color: var(--ot-clr);
+  text-decoration: none;
+  background: var(--notif-clr);
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+  .sh {
+    display: none;
+  }
+
+  #answers {
+    display: none;
+  }
+
+  .correct {
+    animation: blink 0.8s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      background-color: #00FF00;
+      font-weight: bold;
+    }
+    50% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: #00FF00;
+      font-weight: bold;
+    }
+  }
+  </style>
+  
+  <div id="container">
+    <header>
+      <h1><strong>Heredity and Variation 1<sup style="font-size: 20px; color: var(--notif-clr);">HSB</sup></strong></h1>
+      <p><strong>Expand your knowledge on Heredity and Variation!</strong></p>
+      <p style="text-decoration: none; color: var(--notif-clr);"><strong>This quiz has a time limit of 7 minutes.</strong></p>
+      <p>By Krish Beachoo on 14 Mar 2023</p>
+      <div id="time-cont" class="time-cont">
+        <p class="timest">Time Left:</p> <br>
+        <div id="timer">1:00</div>
+      </div>
+      <figure class="main-article__figure">
+      <img class="head-img" src="https://images.unsplash.com/photo-1641903202531-bfa6bf0c6419?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2VuZXN8ZW58MHwwfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@sangharsh_l">
+      <figcaption>
+        https://unsplash.com/@sangharsh_l
+      </figcaption>
+    </figure>
+    </header>
+    <div id="end">
+      <img style="height: 20vh; margin-top: 30px;" src="/assets/logo.png" alt="Logo">
+      <h1 class="end-h1">Oh No! You ran out of time!</h1>
+      <p class="end-p">Gotta work faster next time!</p>
+      <a class="end-a" href="javascript:location.reload(true)"><i class="fa-solid fa-rotate-right"></i> Reload Page to Redo the Quiz</a>
+      <br><div class="ad-home-hz ads">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2241691244041236"
+        crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-2241691244041236"
+        data-ad-slot="8371500648"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+      <p>&copy; 2023 Edukatte</p>
+    </div>
+    <section id="quizs">
+      <div class="ad-note-sq ads">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2241691244041236"
+        crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-2241691244041236"
+        data-ad-slot="8371500648"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+      <form name="quizForm" onsubmit="return submitAnswers()">
+        <div class="question">
+        <h3>1. ln a multicellular organism whenever cells need to be replaced, cells divide by</h3>
+        <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">a. Mitosis</label><br>
+        <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">b. Meiosis</label><br>
+        <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">c. Fission</label><br>
+        <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">d. Fertilization</label><br>
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>2. Which of the following statements about meiosis is true?</h3>
+        <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">a. Occurs in the Uterus</label><br>
+        <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">b. 4 daughter cells are produced</label><br>
+        <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">c. Produces genetically identical cells</label><br>
+        <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">d. Daughter cells have the same number of chromosomes as the parent cell</label><br>      
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>3. In which of the following structures is an allele for eye colour located?</h3>
+        <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">a. Endoplasmic Reticulum </label><br>
+        <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">b. Nucleus</label><br>  
+        <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">c. Chromosome</label><br>
+        <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">d. Golgi Apparatus</label><br>  
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>4. During asexual reproduction, an organism produces new organisms that are identical to the parent by the process of</h3>
+        <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">a. Pathogenisis</label><br>
+        <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">b. Meiosis</label><br>
+        <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">c. Reduction Division</label><br>
+        <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">d. Mitosis</label><br>
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>5. Which of the following is the term used to describe the physical expression of an individual&#39;s genetic makeup?</h3>
+        <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">a. Heterozygous</label><br>
+        <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">b. Phenotype</label><br>
+        <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">c. Genotype</label><br>
+        <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">d. Homozygous</label><br>      
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>6. The sex chromosomes of a human male are:</h3>
+        <input type="radio" name="q6" value="a" id="q6a"><label for="q6a">a. XX</label><br>
+        <input type="radio" name="q6" value="b" id="q6b"><label for="q6b">b. XY</label><br>  
+        <input type="radio" name="q6" value="c" id="q6c"><label for="q6c">c. YY</label><br>
+        <input type="radio" name="q6" value="d" id="q6d"><label for="q6d">d. XY or XX (depending on the individual)</label><br>  
+        </div>
+        <br>
+        <br>
+        <div class="question">
+        <h3>7. The genetic makeup of an individual is referred to as its:</h3>
+        <input type="radio" name="q7" value="a" id="q7a"><label for="q7a">a. Heterozygous</label><br>
+        <input type="radio" name="q7" value="b" id="q7b"><label for="q7b">b. Homozygous</label><br>
+        <input type="radio" name="q7" value="c" id="q7c"><label for="q7c">c. Phenotype</label><br>
+        <input type="radio" name="q7" value="d" id="q7d"><label for="q7d">d. Genotype</label><br>
+        </div>  
+        <br><br>
+        <div class="question">
+        <h3>8. The process by which a diploid cell divides into four haploid cells is called:</h3>
+        <input type="radio" name="q8" value="a" id="q8a"><label for="q8a">a. Transcription</label><br>
+        <input type="radio" name="q8" value="b" id="q8b"><label for="q8b">b. Mitosis</label><br>
+        <input type="radio" name="q8" value="c" id="q8c"><label for="q8c">c. Meiosis</label><br>
+        <input type="radio" name="q8" value="d" id="q8d"><label for="q8d">d. Translation</label><br>      
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>9. Which of the following is a characteristic of a recessive allele?</h3>
+        <input type="radio" name="q9" value="a" id="q9a"><label for="q9a">a. It is always expressed in the phenotype</label><br>
+        <input type="radio" name="q9" value="b" id="q9b"><label for="q9b">b. It is only found in females</label><br>  
+        <input type="radio" name="q9" value="c" id="q9c"><label for="q9c">c. It is always lethal</label><br>
+        <input type="radio" name="q9" value="d" id="q9d"><label for="q9d">d. It is masked by the presence of a dominant allele</label><br>  
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>10. A genotype consisting of two identical alleles for a particular gene is called:</h3>
+        <input type="radio" name="q10" value="a" id="q10a"><label for="q10a">a. Heterozygous</label><br>
+        <input type="radio" name="q10" value="b" id="q10b"><label for="q10b">b. Homozygous</label><br>
+        <input type="radio" name="q10" value="c" id="q10c"><label for="q10c">c. Recessive</label><br>
+        <input type="radio" name="q10" value="d" id="q10d"><label for="q10d">d. Dominant</label><br>
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>11. A gene that masks the expression of another gene when both are present in the same individual is called:</h3>
+        <input type="radio" name="q11" value="a" id="q11a"><label for="q11a">a. Dominant</label><br>
+        <input type="radio" name="q11" value="b" id="q11b"><label for="q11b">b. Recessive</label><br>
+        <input type="radio" name="q11" value="c" id="q11c"><label for="q11c">c. Homozygous</label><br>
+        <input type="radio" name="q11" value="d" id="q11d"><label for="q11d">d. Heterozygous</label><br>      
+        </div>
+        <br><br>
+        <div class="question">
+        <h3>12. An allele is:</h3>
+        <input type="radio" name="q12" value="a" id="q12a"><label for="q12a">a. A type of protein</label><br>
+        <input type="radio" name="q12" value="b" id="q12b"><label for="q12b">b. A type of chromosome</label><br>  
+        <input type="radio" name="q12" value="c" id="q12c"><label for="q12c">c. A type of cell</label><br>
+        <input type="radio" name="q12" value="d" id="q12d"><label for="q12d">d. A type of gene</label><br>  
+        </div>
+        <br><br>
+        <div class="ad-note-sq ads">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2241691244041236"
+        crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-2241691244041236"
+        data-ad-slot="8371500648"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+        <input type="submit" value="See Score">
+        <p style="font-family: var(--head-ft);"> <a style="color: #202124;" target="_blank" href="https://krishclock.netlify.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i> Sponsored by Krish Clock</a></p>
+      </form>
+      <div id="results"></div>
+      <a target="_blank" class="kclock" href="https://krishclock.netlify.app/">
+          <img src="/assets/clock-w.png" alt="Krish Clock">
+      </a>
+    </section>
+    <div class="notelink">
+      <a target="_blank" class="gotonote" href="https://edukatte.netlify.app/HSB/heredity-and-variation/">Go to Related Note Page <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+    <footer>
+      <p>&copy; 2023 Edukatte</p>
+    </footer> 
+  </div>
+  <div class="sh">
+    <p id="A1">a</p>
+    <p id="A2">b</p>
+    <p id="A3">c</p>
+    <p id="A4">d</p>
+    <p id="A5">b</p>
+    <p id="A6">b</p>
+    <p id="A7">d</p>
+    <p id="A8">c</p>
+    <p id="A9">d</p>
+    <p id="A10">b</p>
+    <p id="A11">a</p>
+    <p id="A12">d</p>
+    <p id="time">7</p>
+  </div>
+  <script>
+    var A1 = document.getElementById('A1').innerText;
+var A2 = document.getElementById('A2').innerText;
+var A3 = document.getElementById('A3').innerText;
+var A4 = document.getElementById('A4').innerText;
+var A5 = document.getElementById('A5').innerText;
+var A6 = document.getElementById('A6').innerText;
+var A7 = document.getElementById('A7').innerText;
+var A8 = document.getElementById('A8').innerText;
+var A9 = document.getElementById('A9').innerText;
+var A10 = document.getElementById('A10').innerText;
+var A11 = document.getElementById('A11').innerText;
+var A12 = document.getElementById('A12').innerText;
+var time = parseInt(document.getElementById('time').innerText);
+
+var timeoutId = setTimeout(function() {
+  document.getElementById('end').style.display = 'block';
+  document.getElementById('quizs').style.display = 'none';
+}, time * 60 * 1000);
+
+function submitAnswers() {
+  var submitButton = document.getElementById("submit-button");
+  var total = 12;
+  var score = 0;
+
+  // Get user input
+  var q1 = document.forms['quizForm']['q1'].value;
+  var q2 = document.forms['quizForm']['q2'].value;
+  var q3 = document.forms['quizForm']['q3'].value;
+  var q4 = document.forms['quizForm']['q4'].value;
+  var q5 = document.forms['quizForm']['q5'].value;
+  var q6 = document.forms['quizForm']['q6'].value;
+  var q7 = document.forms['quizForm']['q7'].value;
+  var q8 = document.forms['quizForm']['q8'].value;
+  var q9 = document.forms['quizForm']['q9'].value;
+  var q10 = document.forms['quizForm']['q10'].value;
+  var q11 = document.forms['quizForm']['q11'].value;
+  var q12 = document.forms['quizForm']['q12'].value;
+
+  // Validation
+  for (var i = 1; i <= total; i++) {
+    if (eval('q' + i) === null || eval('q' + i) == '') {
+      alert('You missed question ' + i);
+      return false;
+    }
+  }
+
+  // Set correct answers
+  var correctAnswers = [A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12];
+
+  var answers = [];
+
+  // Get the selected answer for each question
+  for (i = 1; i <= total; i++) {
+    var radios = document.getElementsByName("q" + i);
+    for (j = 0; j < radios.length; j++) {
+      if (radios[j].checked) {
+        answers.push(radios[j].value);
+      }
+    }
+  }
+
+  // Check the selected answers against the correct answers
+  for (i = 0; i < total; i++) {
+    if (answers[i] == correctAnswers[i]) {
+      score++;
+      // Add a class to the label element of the correct answer
+      var label = document.querySelector("input[name=q" + (i + 1) + "][value=" + correctAnswers[i] + "] + label");
+      label.classList.add("correct");
+    } else {
+      // Add a class to the label element of the incorrect answer
+      var label = document.querySelector("input[name=q" + (i + 1) + "][value=" + answers[i] + "] + label");
+      label.classList.add("incorrect");
+    }
+  }
+
+  // Display results
+  var results = document.getElementById('results');
+  results.innerHTML = '<h3>You scored <span>' + score + '</span> out of <span>' + total + '</span></h3>';
+
+  document.getElementById('time-cont').style.display = 'none';
+  clearTimeout(timeoutId);
+
+  return false;
+}
+
+// JavaScript code to create the timer
+var timeLeft = time * 60;
+
+var countdown = setInterval(function() {
+  var minutes = Math.floor(timeLeft / 60);
+  var seconds = timeLeft % 60;
+
+  // Add leading zero to seconds if needed
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+
+  // Update the timer display
+  document.getElementById('timer').innerHTML = minutes + ":" + seconds;
+
+  // Decrease timeLeft by one second
+  timeLeft--;
+
+  // Stop the timer when timeLeft reaches 0
+  if (timeLeft < 0) {
+    clearInterval(countdown);
+    document.getElementById('timer').innerHTML = "Time's up!";
+    document.getElementById('end').style.display = 'block';
+    document.getElementById('quizs').style.display = 'none';
+  }
+}, 1000); // Update timer every second
+
+  </script>
+</body>
+</html>

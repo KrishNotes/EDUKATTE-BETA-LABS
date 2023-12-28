@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduQuizz</title>
+  <meta property="og:title" content="EduQuizz">
+  <meta property="og:site_name" content="Edukatte">
+  <meta property="og:image" content="https://i.imgur.com/jsrnCXs.png">
+  <meta property="og:description" content="EduQuizz is a new addition to Edukatte which provides informative and timed quizzes on different topics. Most questions are from official CSEC Past Papers.">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="theme-color" content="#0e8086">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="icon" type="image/x-icon" href="/assets/logo-512.png">
+  <script src="https://kit.fontawesome.com/fcf47e5f26.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Lora&display=swap" rel="stylesheet">  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2241691244041236"crossorigin="anonymous"></script></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSMS3DDW4X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSMS3DDW4X');
+</script>
+<body>
+  <header>
+    <nav >
+        <div class="logo">
+            <a href="/"><img src="/assets/logo-512.png" alt="Edukatte Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/BLOG">BLOG <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a></li>
+            <li class="dropdown">
+                <a href="/#Notebooks"><i class="fa-solid fa-angle-down arrownav"></i> Notebooks</a>
+                <div class="dropdown-content">
+                    <a href="/hsb">HSB</a>
+                    <a href="/chemistry">Chemistry</a>
+                    <a href="/biology">Biology</a>
+                    <a href="/#Notebooks">All Subjects</a>
+                </div>
+            </li>
+            <li><a href="/#Flashcards">Flashcards <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a></li>
+            <li><a href="/#About">About Us</a></li>
+            <li><a href="/#Team">Team</a></li>
+            <li class="dropdown">
+                <a href="/EduQuizz"><i class="fa-solid fa-angle-down arrownav"></i> EduQuizzes <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a>
+                <div class="dropdown-content">
+                    <a href="/eduquizz/#hsb">HSB</a>
+                    <a href="/eduquizz/#i.t.">IT</a>
+                    <a href="/EduQuizz">All Quizzes</a>
+                </div>
+
+            </li>
+            <li><a href="/#Past-Papers">Past Papers <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a></li>
+            <li><a class="contact-nav" href="/contact">Contact</a></li>
+            <li><a href="/search"><i class="fa-solid fa-magnifying-glass"></i> <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a></li>
+        </ul>
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>
+
+  <main>
+    <div class="noteimg quizimg">
+  <h1 class="section-title">EduQui<span style="color: #ce574d; background-image: none; border: none; padding: 0px;">zz</span></h1>
+</div>
+<div id="progress-bar"></div>
+  <div class="section container">
+    <div class="quiz-rules">
+      <h1>EduQui<span style="color: #ce574d;">zz</span> GUIDELINES </h1>
+      <div style="text-align: center;">
+        <button id="revealBtn" style="background-color: var(--notif-clr); border-radius: 5px;"><i style="margin-left: 2px;" class="fa-solid fa-circle-exclamation"></i> Click to Show Quidelines</button>
+      </div>
+      <div id="hiddenText" style="display: none;">
+        <ul>
+          <li>Each quiz will have a time limit which will be indicated.</li>
+          <li>The timer for each quiz is located at the top left of the screen.</li>
+          <li>When your time runs out, the quiz ends and you will have to reload the page to re-attempt it.</li>
+          <li>At the end of the quiz page is a "See Score" button which will display how much out of the total you got. It will also blink the correct answers you got green.</li>
+          <li>The "See Score" button only works once all questions have been attempted. However once you have submited, you are allowed to change answers without a time limit.</li>
+          <li>Also at the end of the quiz page is a "Go to Related Note Page" button which will take you to the Edukatte note page for that respective quiz.</li>
+        </ul>  
+      </div>
+    </div>
+<div class="ad-misc-hz ads">
+
+	</div>
+    <p class="quiz-tags">
+      <span style="word-spacing: 2px; color: var(--ot-clr); border: 3px solid var(--notif-clr);" onclick="toggleContentA()"><i class="fa-solid fa-box-archive"></i> ALL QUIZZES</span> 
+      <span onclick="toggleContentB()">HSB</span>
+      <span onclick="toggleContentC()">I.T.</span>
+    </p>
+    <div id="contentA">
+      <h1 style="color: var(--notif-clr);" class="section-titleE">All Quizzes!</h1>
+      <div class="section container">    
+        <ul role="list" class="articles__list flow">
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1563785875600-de60b5130178?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJlcHJvZHVjdGlvbnxlbnwwfDB8MHx8fDA%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@centelm" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/reproduction-1/">Reproduction 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 26 May 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 10 minutes</span> </p>
+    <p class="snippet__body">Learn about Reproduction with this HSB Eduquizz!</p>
+    <a target="_blank" href="/EduQuizz/reproduction-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1641903202531-bfa6bf0c6419?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2VuZXN8ZW58MHwwfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@sangharsh_l" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/hereditary-and-variation-1/">Heredity and Variation 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 14 Mar 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 7 minutes</span> </p>
+    <p class="snippet__body">Expand your knowledge on Heredity and Variation!</p>
+    <a target="_blank" href="/EduQuizz/hereditary-and-variation-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1624454002429-40ed87a5ec04?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW5zdWxpbnxlbnwwfDB8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@towfiqu999999" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/endocrine-system-1/">Endocrine System 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 2 Mar 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 10 minutes</span> </p>
+    <p class="snippet__body">Expand your understanding of the Endocrine System with this EduQuizz!</p>
+    <a target="_blank" href="/EduQuizz/endocrine-system-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1612208354038-c8f637be3302?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHNrZWxldG9ufGVufDB8MHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@kutyawka" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/skeletal-system-1/">Skeletal System 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 1 Mar 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 12 minutes</span> </p>
+    <p class="snippet__body">Expand your knowledge on the Skeletal System with this EduQuizz by Edukatte!</p>
+    <a target="_blank" href="/EduQuizz/skeletal-system-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1483137140003-ae073b395549?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGlnZXN0aW9ufGVufDB8MHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@brookelark" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/digestion-1/">Digestion 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 25 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 7 minutes</span> </p>
+    <p class="snippet__body">Expand your knowledge on the Digestive System</p>
+    <a target="_blank" href="/EduQuizz/digestion-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1555708982-8645ec9ce3cc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bHVuZ3N8ZW58MHwwfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@averey" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/respiration-breathing/">Respiration &amp; Breathing 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 16 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 10 minutes</span> </p>
+    <p class="snippet__body">Test your Knowledge of Respiration &amp; Breathing!</p>
+    <a target="_blank" href="/EduQuizz/respiration-breathing/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1524222717473-730000096953?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bnV0cmllbnRzfGVufDB8MHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@lum3n" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/biomolecules-and-macronutrients-1/">Biomolecules and Macronutrients 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 15 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 10 minutes</span> </p>
+    <p class="snippet__body">Test and expand your knowledge on Biomolecules and Macronutrients!</p>
+    <a target="_blank" href="/EduQuizz/biomolecules-and-macronutrients-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1520013573795-38516d2661e4?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRlbnRpc3R8ZW58MHwwfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@alexpadurariu" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/teeth-1/">Teeth 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 14 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 7 minutes</span> </p>
+    <p class="snippet__body">Test knowledge on the tooth!</p>
+    <a target="_blank" href="/EduQuizz/teeth-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80" alt="https://unsplash.com/@averey" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/circulatory-system-1/">Circulatory System 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 13 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 5 minutes</span> </p>
+    <p class="snippet__body">Test your knowledge of the Circulatory System!</p>
+    <a target="_blank" href="/EduQuizz/circulatory-system-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1631049127390-4fc14daf3df6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=868&amp;q=80" alt="https://unsplash.com/@nci" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/cells-1/">Cells 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 10 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 6 minutes</span> </p>
+    <p class="snippet__body">Test your knowledge of cells, with this first Cells EduQuizz. Compiled by Krish Beachoo. Check it out!</p>
+    <a target="_blank" href="/EduQuizz/cells-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+          
+        </ul>
+      </div>
+    </div>
+    <div id="contentB">
+      <h1 style="color: var(--notif-clr);" class="section-titleE">HSB Quizzes!</h1>
+      <div class="section container">  
+        <ul role="list" class="articles__list flow">
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1563785875600-de60b5130178?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJlcHJvZHVjdGlvbnxlbnwwfDB8MHx8fDA%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@centelm" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/reproduction-1/">Reproduction 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 26 May 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 10 minutes</span> </p>
+    <p class="snippet__body">Learn about Reproduction with this HSB Eduquizz!</p>
+    <a target="_blank" href="/EduQuizz/reproduction-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1641903202531-bfa6bf0c6419?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2VuZXN8ZW58MHwwfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@sangharsh_l" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/hereditary-and-variation-1/">Heredity and Variation 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 14 Mar 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 7 minutes</span> </p>
+    <p class="snippet__body">Expand your knowledge on Heredity and Variation!</p>
+    <a target="_blank" href="/EduQuizz/hereditary-and-variation-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1624454002429-40ed87a5ec04?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW5zdWxpbnxlbnwwfDB8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@towfiqu999999" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/endocrine-system-1/">Endocrine System 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 2 Mar 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 10 minutes</span> </p>
+    <p class="snippet__body">Expand your understanding of the Endocrine System with this EduQuizz!</p>
+    <a target="_blank" href="/EduQuizz/endocrine-system-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1612208354038-c8f637be3302?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHNrZWxldG9ufGVufDB8MHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@kutyawka" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/skeletal-system-1/">Skeletal System 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 1 Mar 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 12 minutes</span> </p>
+    <p class="snippet__body">Expand your knowledge on the Skeletal System with this EduQuizz by Edukatte!</p>
+    <a target="_blank" href="/EduQuizz/skeletal-system-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1483137140003-ae073b395549?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGlnZXN0aW9ufGVufDB8MHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@brookelark" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/digestion-1/">Digestion 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 25 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 7 minutes</span> </p>
+    <p class="snippet__body">Expand your knowledge on the Digestive System</p>
+    <a target="_blank" href="/EduQuizz/digestion-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1555708982-8645ec9ce3cc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bHVuZ3N8ZW58MHwwfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@averey" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/respiration-breathing/">Respiration &amp; Breathing 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 16 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 10 minutes</span> </p>
+    <p class="snippet__body">Test your Knowledge of Respiration &amp; Breathing!</p>
+    <a target="_blank" href="/EduQuizz/respiration-breathing/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1524222717473-730000096953?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bnV0cmllbnRzfGVufDB8MHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@lum3n" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/biomolecules-and-macronutrients-1/">Biomolecules and Macronutrients 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 15 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 10 minutes</span> </p>
+    <p class="snippet__body">Test and expand your knowledge on Biomolecules and Macronutrients!</p>
+    <a target="_blank" href="/EduQuizz/biomolecules-and-macronutrients-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1520013573795-38516d2661e4?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRlbnRpc3R8ZW58MHwwfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="https://unsplash.com/@alexpadurariu" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/teeth-1/">Teeth 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 14 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 7 minutes</span> </p>
+    <p class="snippet__body">Test knowledge on the tooth!</p>
+    <a target="_blank" href="/EduQuizz/teeth-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80" alt="https://unsplash.com/@averey" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/circulatory-system-1/">Circulatory System 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 13 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 5 minutes</span> </p>
+    <p class="snippet__body">Test your knowledge of the Circulatory System!</p>
+    <a target="_blank" href="/EduQuizz/circulatory-system-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+            
+               <li>
+    <article class="snippet">
+    <img src="https://images.unsplash.com/photo-1631049127390-4fc14daf3df6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=868&amp;q=80" alt="https://unsplash.com/@nci" class="snippet__image">
+    <h3 class="snippet__title"><a target="_blank" href="/EduQuizz/cells-1/">Cells 1<sup style="color: var(--notif-clr); font-size: 30px; margin-left: 3px;">HSB</sup> </a></h3>
+    <p class="snippet__meta">by <span>Krish Beachoo on 10 Feb 2023</span> <br> <span style="color: var(--notif-clr);" >Time Limit: 6 minutes</span> </p>
+    <p class="snippet__body">Test your knowledge of cells, with this first Cells EduQuizz. Compiled by Krish Beachoo. Check it out!</p>
+    <a target="_blank" href="/EduQuizz/cells-1/" class="btn btn--primary">GO  <i class="fa-solid fa-up-right-from-square"></i></a>
+    </article>
+</li>
+            
+          
+        </ul>
+      </div>
+    </div>
+    <div id="contentC">
+      <h1 style="color: var(--notif-clr);" class="section-titleE">I.T. Quizzes!</h1>
+      <div class="section container">  
+        <ul role="list" class="articles__list flow">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </div>
+    </div>
+</div>
+<script>
+  const revealBtn = document.getElementById("revealBtn");
+const hiddenText = document.getElementById("hiddenText");
+
+revealBtn.addEventListener("click", function() {
+  if (hiddenText.style.display === "none") {
+    hiddenText.style.display = "block";
+    revealBtn.innerText = "Click to Hide Guidelines";
+  } else {
+    hiddenText.style.display = "none";
+    revealBtn.innerText = "Click to Show Guidelines";
+  }
+});
+
+// Get all the span elements with the class 'quiz-tags'
+const quizTags = document.querySelectorAll('.quiz-tags span');
+
+// Get all the content divs
+const contentDivs = document.querySelectorAll('[id^="content"]');
+
+// Add a click event listener to each span element
+quizTags.forEach((span, index) => {
+  span.addEventListener('click', function() {
+    // Remove the 'clicked' class from all span elements
+    quizTags.forEach(otherSpan => {
+      if (otherSpan !== this) {
+        otherSpan.classList.remove('clicked');
+      }
+    });
+
+    // Toggle the 'clicked' class on the clicked span element
+    this.classList.toggle('clicked');
+
+    // Hide all content divs
+    contentDivs.forEach(contentDiv => {
+      contentDiv.style.display = 'none';
+    });
+
+    // Show the corresponding content div based on the index
+    contentDivs[index].style.display = 'block';
+
+    // Update the URL hash with the name of the clicked span
+    window.location.hash = `#${span.textContent.toLowerCase().replace(/\s/g, '')}`;
+  });
+});
+
+// Check the URL hash and activate the corresponding span
+const activeSpanName = window.location.hash.substr(1);
+quizTags.forEach((span, index) => {
+  if (span.textContent.toLowerCase().replace(/\s/g, '') === activeSpanName) {
+    span.classList.add('clicked');
+    contentDivs[index].style.display = 'block';
+  }
+});
+
+// If no valid active span is found, set "All Quizzes" as the default active span
+if (!document.querySelector('.quiz-tags span.clicked')) {
+  quizTags[0].classList.add('clicked');
+  contentDivs[0].style.display = 'block';
+}
+
+
+</script>
+ 
+  </main> 
+  <footer>
+    <div class="content">
+        <div class="left box">
+        <div class="upper">
+            <img src="/assets/logo.png" alt="Logo">
+            <div class="topic">About Edu<span style="color: #ce574d;">k</span>a<span style="color: #ce574d;">tt</span>e</div>
+            <p>
+            Edu<span style="color: #ce574d;">k</span>a<span style="color: #ce574d;">tt</span>e aims to provide useful, concise and informative notes for students. These notes are compiled by Form 6 Students: Krish Beachoo, Christopher Seebaran, Josiah Renne, Raed Mohammed, Arun Singh, James Babwah, Bryan Balkissoon, Adam Ramsahai, Radley Sooknanan and Syed Ali. Some notes are not owned by contributors but rather the respective instructors throughout our student career.
+            </p>
+            <br>
+            <div class="socials">
+                <a target="_blank" href="https://www.instagram.com/edukatte_tt/"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCXVkpI3tr15aWwTppswJpBg"><i class="fa-brands fa-youtube"></i></a>
+                <a target="_blank" href="https://g.co/kgs/uhcztD"><i class="fa-brands fa-google"></i> <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a>
+            </div>
+        </div>
+        <div class="credits">
+            <a href="/aleem-dabiedeen">Our Logo was designed by Aleem Dabiedeen (October 2023)</a>
+        </div>
+        </div>
+        <div class="middle box">
+            <div class="topic">Sections</div>
+            <div><a href="/Blog">BLOG <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a></div>
+            <div><a href="/#Notebooks">Notebooks</a></div>
+            <div><a href="/EduQuizz">EduQuizzes <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a></div>
+            <div><a href="/#Past-Papers">Past Papers <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a></div>
+            <div><a href="/#Flaschards">Flashcards <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup></a></div>
+            <li class="abt-footer"><a href="/#About">About Us</a></li>
+            <li class="abt-footer"><a href="/#Team">The Team</a></li>
+            <div><a href="/contact">Contact</a></div>
+            <div><a href="/sponsors">Our Sponsors</a></div>
+            <div><a href="/privacy-policy">Privacy Policy</a></div>
+            <a target="_blank" href="https://cheatography.com/edukatte-tt/">
+                <img class="cheatography" src="https://media.cheatography.com/images/cheatography_logo.png" alt="cheatography" class="cheatography"> <sup style="border-radius: 3px; background-image: var(--grad-new); font-weight: bold; padding: 3px; font-size: 10px;">NEW!</sup>
+            </a>
+            <div><a href="/admin">Admin Log In</a></div>
+    </div>
+    <div class="bottom">
+        <p>
+            Please note that we operate independently of the Caribbean Examinations Council (CXC). Our solutions are designed to assist you in your studies and preparation for the exams, and are not affiliated with or endorsed by the CXC. We wish you the best of luck as you pursue your academic goals, and hope that our resources prove helpful in your endeavors.
+        </p>
+        <div class="footer-tt">
+            <img class="tt-flag" src="/assets/proudly-tt.png" alt="T&T">
+            <p style="color: var(--notif-clr); text-align: center;">Trinidad & Tobago</p>
+        </div>
+        <p style="text-align: center;">©2023 <a href="#">Edu<span style="color: #ce574d;">k</span>a<span style="color: #ce574d;">tt</span>e</a> | All rights reserved <br> coded with <i class="fa fa-heart" aria-hidden="true"></i> by theKrishProject Team</p>
+    </div>
+</footer>
+
+  <a href="#" class="to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+  <!--Work IN progress Alert-->
+    <div class="alert-container">
+        <div class="alert-card">
+            <span class="close-button" onclick="closeAlert()">&times;</span>
+            <img src="/assets/logo.png" alt="logo" style="margin: 0 auto; height: 10vh;">
+            <h2 style="font-family: var(--head-ft); font-size: 35px;"><i style="color: #da1647; transform: rotate(-10deg);" class="fa-solid fa-bullhorn"></i> NEW: Weekly Saturday Digest</h2> <br>
+            <p>We're thrilled to introduce Edukatte's newest feature: the Weekly Saturday Digest! This exclusive newsletter is your ultimate guide to staying informed about the latest educational content, conveniently delivered to your inbox every Saturday at 6 PM. <br> <br> <a style="color: #da1647; padding: 10px; font-weight: 700; background-color: var(--drk-clr);" href="/weekly-saturday-digest"><i class="fa-solid fa-envelope"></i> SIGN UP NOW!</a></p> <br>
+            <img style="height: 8vh; margin: 0 auto;" src="https://i.imgur.com/iPdcq2Z.png" alt="From Krish">
+            <br><button class="new-close-button" onclick="closeAlert()">Close Alert</button>
+        </div>
+    </div>
+
+  <!--<img id="openBtn" src="/assets/edukatte-new-years.png" alt="Image" onclick="openPopup()">-->
+  <!-- line 1230 css -->
+  <!--<img class="clickme" src="https://i.imgur.com/K2PTWsE.png" alt="">-->
+  <div id="popupContainer" class="popup">
+    <div class="rain-container">
+    <div id="popupContent">
+        <img class="occ-img" src="/assets/edukatte-new-years.png" alt="">
+      <h2 class="greet">HAPPY NEW YEARS !</h2>
+      <!--<p style="color: white;">Introducing Occasions Knowledge Quests! Participate today and get recogised.</p>
+      <a href="/occasions-knowledge-quests" class="bookmark-link">Get more information on OKQs <i class="fa-solid fa-meteor"></i></a>-->
+      <p class="from">From the Management at Edukatte</p>
+      <img class="occ-logo" src="/assets/logo.png" alt="logo">
+    </div>
+    <div class="ad-occ-hz ads">
+
+    </div>
+    <button id="closeBtn" onclick="closePopup()"><i class="fa-solid fa-x"></i> CLOSE</button>
+  </div>
+  </div>
+<script src="/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (!checkIfPopupShownToday()) {
+        const alertContainer = document.querySelector('.alert-container');
+        alertContainer.style.display = 'flex';
+        setPopupShownToday();
+    }
+});
+
+function closeAlert() {
+    const alertContainer = document.querySelector('.alert-container');
+    alertContainer.style.display = 'none';
+}
+
+function checkIfPopupShownToday() {
+    const lastPopupShownDate = localStorage.getItem('lastPopupShown');
+    if (!lastPopupShownDate) {
+        return false;
+    }
+
+    const today = new Date().toLocaleDateString();
+    return lastPopupShownDate === today;
+}
+
+function setPopupShownToday() {
+    const today = new Date().toLocaleDateString();
+    localStorage.setItem('lastPopupShown', today);
+}</script>
+</body>
+</html>
